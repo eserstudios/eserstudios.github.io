@@ -1,0 +1,227 @@
+<title>ESER Studios</title>
+
+<style>
+  /* Same token set as anchor/privacy-policy.html, so the studio page and the app's own
+     documents read as one thing. Light is the bare :root because light is the default. */
+  :root {
+    --bg: #f4f1ea;
+    --surface: #fffdf8;
+    --surface-2: #f0ebe1;
+    --line: #ddd5c7;
+    --text: #18211f;
+    --text-dim: #3b4845;
+    --muted: #55625f;
+    --accent: #196b58;
+    --accent-soft: #dcece7;
+    --accent-line: #7bb4a4;
+    --accent-ink: #ffffff;
+
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --radius: 18px;
+    --radius-lg: 22px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1417;
+      --surface: #16241f;
+      --surface-2: #1a2226;
+      --line: #2f4a43;
+      --text: #e9eff1;
+      --text-dim: #b4c3c9;
+      --muted: #8c9ea6;
+      --accent: #7fd1bd;
+      --accent-soft: #16302c;
+      --accent-line: #3d7a6c;
+      --accent-ink: #04211c;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0e1417;
+    --surface: #16241f;
+    --surface-2: #1a2226;
+    --line: #2f4a43;
+    --text: #e9eff1;
+    --text-dim: #b4c3c9;
+    --muted: #8c9ea6;
+    --accent: #7fd1bd;
+    --accent-soft: #16302c;
+    --accent-line: #3d7a6c;
+    --accent-ink: #04211c;
+  }
+
+  html {
+    font-size: 17px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.65;
+  }
+
+  .page {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: 2.6rem;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .lede {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  /* One app today, so the card is a single wide panel rather than a grid pretending
+     there is a catalogue. */
+  .app {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .app__name {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  .app__tag {
+    color: var(--text-dim);
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.2rem;
+    list-style: none;
+  }
+
+  .facts li {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  a {
+    color: var(--accent);
+    text-underline-offset: 0.18em;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  footer {
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.86rem;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+</style>
+
+<div class="page">
+
+  <header>
+    <span class="eyebrow">Independent studio</span>
+    <h1>ESER Studios</h1>
+    <p class="lede">
+      Small Android apps and games, built one at a time. The aim is narrow and practical:
+      make the thing someone actually has to do today a little easier to start.
+    </p>
+  </header>
+
+  <section>
+    <h2>What we've published</h2>
+    <div class="app">
+      <span class="app__name">Anchor</span>
+      <p class="app__tag">
+        A daily-structure app for adults with ADHD. Build a routine, run it, and pick it back
+        up when the day goes sideways — no accounts, no streaks, and nothing you can fail.
+      </p>
+      <ul class="facts">
+        <li>Works offline</li>
+        <li>No accounts</li>
+        <li>No ads or analytics</li>
+        <li>10 languages</li>
+      </ul>
+      <div class="links">
+        <a href="/anchor/privacy-policy.html">Privacy policy</a>
+        <a href="mailto:studioseser@gmail.com">Support</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p class="app__tag">
+      Bug reports, questions and refund requests all go to the same place, and a person reads
+      them: <a href="mailto:studioseser@gmail.com">studioseser@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <span>ESER Studios</span>
+    <span>Anchor · com.anchor.routine</span>
+  </footer>
+
+</div>
